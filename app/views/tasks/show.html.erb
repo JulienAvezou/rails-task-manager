@@ -1,0 +1,10 @@
+<h2><%= @task.title %></h2>
+<%= link_to 'Edit this task', edit_path %>
+<p><%= @task.details %></p>
+<% if @task.completed %>
+  <p><i class="fa fa-check-square-o" aria-hidden="true"></i>  This task is completed</p>
+<% else %>
+  <p><i class="fa fa-square-o" aria-hidden="true"></i>  This task is not completed yet</p>
+<% end %>
+<%= link_to 'Back to list', tasks_path %>
+
